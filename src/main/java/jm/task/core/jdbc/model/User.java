@@ -1,7 +1,6 @@
 package jm.task.core.jdbc.model;
 
 import javax.persistence.*;
-
 @Entity
 @Table(name = "users")//если класс == название таблицы , "=" можно не писать
 public class User {

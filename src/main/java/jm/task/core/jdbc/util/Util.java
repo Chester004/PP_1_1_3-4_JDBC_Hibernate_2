@@ -1,6 +1,5 @@
 package jm.task.core.jdbc.util;
 
-import com.mysql.cj.x.protobuf.MysqlxNotice;
 import jm.task.core.jdbc.model.User;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
@@ -29,7 +28,7 @@ public class Util {
         prop.setProperty("hibernate.connection.password", "root");
         prop.setProperty("hibernate.connection.driver_class", "com.mysql.jdbc.Driver");
         prop.setProperty("show_sql", "true");
-        java.util.logging.Logger.getLogger("org.hibernate").setLevel(Level.OFF);
+        //java.util.logging.Logger.getLogger("org.hibernate").setLevel(Level.OFF);
 
         SessionFactory factory = new Configuration()
                 .addProperties(prop)

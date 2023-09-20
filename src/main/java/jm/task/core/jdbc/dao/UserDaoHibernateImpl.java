@@ -9,6 +9,7 @@ import org.hibernate.SessionFactory;
 
 import javax.persistence.EntityNotFoundException;
 import javax.persistence.PersistenceException;
+import javax.persistence.Query;
 import javax.persistence.criteria.CriteriaBuilder;
 import javax.persistence.criteria.CriteriaQuery;
 import java.util.List;
@@ -61,10 +62,10 @@ public class UserDaoHibernateImpl implements UserDao {
     public void removeUserById(long id) {
         try(Session session = Util.getHib();) {
             session.beginTransaction();
-            User user = session.load(User.class, id );
-            session.delete(user);
-            session.flush();
-            session.close();
+            String hql = "DELETE User WHERE id = :ID";
+            Query query = session.createQuery(hql);
+            query.setParameter("ID",id);
+            query.executeUpdate();
         }catch (EntityNotFoundException e){
             System.err.printf("Id %d нет в таблице \n",id);
         }
@@ -73,19 +74,21 @@ public class UserDaoHibernateImpl implements UserDao {
     @Override
     public List<User> getAllUsers() {
         Session session = Util.getHib();
-        CriteriaBuilder builder = session.getCriteriaBuilder();
-        CriteriaQuery<User> criteria = builder.createQuery(User.class);
-        criteria.from(User.class);
-        List<User> data = session.createQuery(criteria).getResultList();
-        return data;
+
+        String hql = "FROM User";
+        Query query = session.createQuery(hql);
+        List<User> users = query.getResultList();
+        return  users;
     }
     @Override
     public void cleanUsersTable() {
-        String dropSQL = "DELETE FROM `users`";
-        Session session = Util.getHib();
-        session.beginTransaction();
-        session.createSQLQuery(dropSQL).executeUpdate();
-        session.getTransaction().commit();
-        session.close();
+        try(Session session = Util.getHib();) {
+            session.beginTransaction();
+            String hql = "DELETE User ";
+            Query query = session.createQuery(hql);
+            query.executeUpdate();
+        }catch (EntityNotFoundException e){
+            System.err.println("Таблица пуста");
+        }
     }
 }
