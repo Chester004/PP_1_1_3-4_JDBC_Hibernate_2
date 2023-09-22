@@ -4,11 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="010e975c-cc4d-4228-8dca-2539594cfb0d" name="Changes" comment="Исправил комментарии 1 части">
+    <list default="true" id="010e975c-cc4d-4228-8dca-2539594cfb0d" name="Changes" comment="Исправил второй раз">
+      <change afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/jm/task/core/jdbc/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jm/task/core/jdbc/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/jm/task/core/jdbc/dao/UserDaoHibernateImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jm/task/core/jdbc/dao/UserDaoHibernateImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/jm/task/core/jdbc/util/Util.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jm/task/core/jdbc/util/Util.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -171,7 +170,8 @@
       <workItem from="1695217617537" duration="2042000" />
       <workItem from="1695234386268" duration="15000" />
       <workItem from="1695244743683" duration="1211000" />
-      <workItem from="1695308541050" duration="8010000" />
+      <workItem from="1695308541050" duration="8126000" />
+      <workItem from="1695392680192" duration="2455000" />
     </task>
     <task id="LOCAL-00001" summary="Готово?">
       <option name="closed" value="true" />
@@ -237,7 +237,15 @@
       <option name="project" value="LOCAL" />
       <updated>1695245939379</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Исправил второй раз">
+      <option name="closed" value="true" />
+      <created>1695318423963</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1695318423964</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -261,7 +269,8 @@
     <MESSAGE value="Новая ветка" />
     <MESSAGE value="Добавил HQL" />
     <MESSAGE value="Исправил комментарии 1 части" />
-    <option name="LAST_COMMIT_MESSAGE" value="Исправил комментарии 1 части" />
+    <MESSAGE value="Исправил второй раз" />
+    <option name="LAST_COMMIT_MESSAGE" value="Исправил второй раз" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
